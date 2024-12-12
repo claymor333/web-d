@@ -6,7 +6,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::get('/', [UserController::class, 'login'])->name('login');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 

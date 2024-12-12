@@ -9,7 +9,11 @@
 </head>
 <body>
 	<header>
-		@include('layouts.header')
+		@if (Auth::check())
+			@include('layouts.header-logged-in')
+		@else
+			@include('layouts.header')
+		@endif
 	</header>
 
 	<div class="container">
